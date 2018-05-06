@@ -16,7 +16,7 @@ class App extends Component {
                     name: name,
                     telephone: telephone,
                     email: email,
-                    category: category.split(",").map(element => element.trim()).filter(element => element.length > 0)
+                    category: category.length > 0 ? category.split(",").map(element => element.trim()).filter(element => element.length > 0) : []
                 })
             })
         )
