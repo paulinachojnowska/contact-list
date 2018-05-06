@@ -9,7 +9,8 @@ class ContactContent extends Component {
                 <br/>
                 {contact.telephone}, {contact.email}
                 <br/>
-                {contact.category}
+                {contact.category.map(categoryElement => "[" + categoryElement + "]" ).join(", ")}
+                <br/>
                 <button
                     onClick={() => this.props.removeContact(contact.id)}
                 >

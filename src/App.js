@@ -40,8 +40,10 @@ class App extends Component {
                 addContact={this.addContact}
             />
             <br/>
-            <ContactList contacts={this.state.contacts}
-                         removeContact={this.removeContact}/>
+            <ContactList
+                contacts={this.state.contacts}
+                removeContact={this.removeContact}
+            />
         </div>
 
     );

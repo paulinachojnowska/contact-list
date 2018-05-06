@@ -30,6 +30,13 @@ class ContactForm extends Component {
         })
     }
 
+    handleCategoryChange = event => {
+        const inputCategory = event.target.value;
+        this.setState({
+            category: inputCategory.split(",").map(element => element.trim())
+        })
+    }
+
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
@@ -62,7 +69,7 @@ class ContactForm extends Component {
                 <input
                     name='category'
                     value={this.state.category}
-                    onChange={this.handleChange}
+                    onChange={this.handleCategoryChange}
                 />
                 <br/><br/>
                 <button>Add</button>
