@@ -7,9 +7,9 @@ class ContactContent extends Component {
             <React.Fragment>
                 <strong>{contact.name}</strong>
                 <br/>
-                {contact.telephone}, {contact.email}
+                {contact.telephone}{contact.telephone && contact.email && ', '}{contact.email}
                 <br/>
-                {contact.category.map(categoryElement => "[" + categoryElement + "]" ).join(", ")}
+                {contact.category.map(categoryElement => "[" + categoryElement + "]").join(", ")}
                 <br/>
                 <button
                     onClick={() => this.props.removeContact(contact.id)}

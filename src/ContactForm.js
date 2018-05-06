@@ -6,7 +6,7 @@ class ContactForm extends Component {
         name: '',
         telephone: '',
         email: '',
-        category: ''
+        category: []
     }
 
     handleSubmit = event => {
@@ -18,10 +18,8 @@ class ContactForm extends Component {
             name: '',
             telephone: '',
             email: '',
-            category: ''
+            category: []
         })
-
-
     }
 
     handleChange = event => {
@@ -31,9 +29,8 @@ class ContactForm extends Component {
     }
 
     handleCategoryChange = event => {
-        const inputCategory = event.target.value;
         this.setState({
-            category: inputCategory.split(",").map(element => element.trim())
+            category: event.target.value
         })
     }
 
@@ -46,6 +43,7 @@ class ContactForm extends Component {
                     name='name'
                     value={this.state.name}
                     onChange={this.handleChange}
+                    required
                 />
                 <br/><br/>
                 Telephone number
