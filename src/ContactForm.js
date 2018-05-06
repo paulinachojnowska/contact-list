@@ -33,26 +33,38 @@ class ContactForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
+                Name
+                <br/>
                 <input
                     name='name'
                     value={this.state.name}
                     onChange={this.handleChange}
                 />
+                <br/><br/>
+                Telephone number
+                <br/>
                 <input
                     name='telephone'
                     value={this.state.telephone}
                     onChange={this.handleChange}
                 />
+                <br/><br/>
+                Email address
+                <br/>
                 <input
                     name='email'
                     value={this.state.email}
                     onChange={this.handleChange}
                 />
+                <br/><br/>
+                Category
+                <br/>
                 <input
                     name='category'
                     value={this.state.category}
                     onChange={this.handleChange}
                 />
+                <br/><br/>
                 <button>Add</button>
             </form>
         )
