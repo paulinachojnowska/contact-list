@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ContactForm from "./ContactForm";
+import ContactList from "./ContactList";
 
 class App extends Component {
     state = {
@@ -26,6 +27,8 @@ class App extends Component {
         <div>
             <h1>Your list of contacts</h1>
             <ContactForm addContact={this.addContact}/>
+            <br/>
+            <ContactList contacts={this.state.contacts}/>
         </div>
 
     );

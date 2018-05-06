@@ -15,8 +15,8 @@ class ContactForm extends Component {
         this.props.addContact(this.state.name, this.state.telephone, this.state.email, this.state.category);
 
         this.setState({
-            taskName: '',
-            taskDescription: '',
+            name: '',
+            telephone: '',
             email: '',
             category: ''
         })
