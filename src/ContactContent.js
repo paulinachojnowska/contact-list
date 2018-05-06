@@ -10,6 +10,11 @@ class ContactContent extends Component {
                 {contact.telephone}, {contact.email}
                 <br/>
                 {contact.category}
+                <button
+                    onClick={() => this.props.removeContact(contact.id)}
+                >
+                    Delete contact
+                </button>
             </React.Fragment>
         )
     }

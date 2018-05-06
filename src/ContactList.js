@@ -7,7 +7,10 @@ class ContactList extends Component {
             <ul>
                 {this.props.contacts.map(contact => (
                     <li key={contact.id}>
-                        <ContactContent contact={contact}/>
+                        <ContactContent
+                            contact={contact}
+                            removeContact={this.props.removeContact}
+                        />
                     </li>
                 ))
                 }

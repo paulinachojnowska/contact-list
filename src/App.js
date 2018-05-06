@@ -22,13 +22,26 @@ class App extends Component {
         )
     }
 
+    removeContact = contactId => {
+        this.setState(function (oldState) {
+            return {
+                contacts: oldState.contacts.filter(function (contact) {
+                    return contact.id !== contactId
+                })
+            }
+        })
+    }
+
   render() {
     return (
         <div>
             <h1>Your list of contacts</h1>
-            <ContactForm addContact={this.addContact}/>
+            <ContactForm
+                addContact={this.addContact}
+            />
             <br/>
-            <ContactList contacts={this.state.contacts}/>
+            <ContactList contacts={this.state.contacts}
+                         removeContact={this.removeContact}/>
         </div>
 
     );
